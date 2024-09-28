@@ -1,0 +1,63 @@
+.mobile-overlay {
+   width: 100vw;
+   height: 100vh;
+   border: 0;
+   margin: 0;
+   background-color: #cac5c5;
+
+   &:modal {
+      max-width: 100%;
+      max-height: 100%;
+   }
+
+   &__body {
+      display: flex;
+      padding: 10px;
+      justify-content: center;
+   }
+
+   &__button {
+      width: 60px;
+      height: 60px;
+      background-color: var(--orange-color);
+      border-radius: calc(var(--border-radius) * 2);
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+      &::before, 
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         background-color: var(--dark-color);
+         width: 50px;
+         height: 2px;
+         translate: -50% -50%;
+      }
+
+      &::before {
+         rotate: -45deg;
+      }
+
+      &::after {
+         rotate: 45deg;
+      }
+   }
+
+   &__list {
+      text-align: center;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+   }
+
+   &__item {}
+
+   &__link {
+      font-size: 50px;
+      @include lineHeight(75, 50)
+   }
+}

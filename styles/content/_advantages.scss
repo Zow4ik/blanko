@@ -1,0 +1,53 @@
+.advantages {
+   &__container {
+      padding-block: 80px;
+
+      @include table {
+         display: flex;
+         justify-content: center;
+         padding-block: 40px;
+      }
+   }
+
+   &__columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+
+      @include table {
+         grid-template-columns: 1fr;
+         row-gap: 30px;
+      }
+   }
+
+   &__column {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+   }
+
+   &__image-wrapper {
+      min-width: 100px;
+      min-height: 100px;
+      background-color: rgba(253, 231, 218, 1);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+   }
+
+   &__content {
+   }
+
+   &__title {
+      color: var(--dark-color);
+      font-weight: 700;
+      font-size: 24px;
+      @include lineHeight(32, 24)
+   }
+
+   &__text {
+      color: var(--dark-color);
+      font-size: 16px;
+      @include lineHeight(24, 16)
+   }
+}

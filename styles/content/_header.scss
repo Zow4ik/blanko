@@ -1,0 +1,214 @@
+.header {
+   color: var(--white-color);
+   background-color: var(--dark-color);
+   font-size: 16px;
+   @include lineHeight(24, 16);
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+      padding-block: 16px;
+
+      @include desktop {
+         column-gap: 10px;
+      }
+   }
+
+   &__body {
+      display: flex;
+      min-height: 100%;
+      align-items: center;
+
+      &:first-child {
+         position: relative;
+
+         &::after {
+            content: '';
+            position: absolute;
+            left: 144px;
+            top: -15px;
+            height: calc(100% + 30px);
+            width: 1px;
+            background-color: var(--border-decor);
+
+            @include desktop {
+               left: 129px;
+            }
+         }
+      }
+
+      &:nth-child(2) {
+         margin-left: auto;
+         position: relative;
+
+         &::after {
+            content: '';
+            position: absolute;
+            right: 32px;
+            top: -15px;
+            height: calc(100% + 30px);
+            width: 1px;
+            background-color: var(--border-decor);
+
+            @include desktop {
+                right: 14px;
+            }
+         }
+      }
+   }
+
+   &__logo {
+      margin-right: 65px;
+
+      @include desktop {
+         margin-right: 40px;
+      }
+
+      @include table {
+         margin: 0;
+      }
+   }
+
+   &__mail {
+      padding: 4px 8px;
+      background-color: var(--grey-color-menu);
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+
+      @include hover {
+         color: var(--grey-color);
+      }
+
+      @include table {
+         display: none;
+      }
+   }
+
+   &__menu {
+      margin-right: 85px;
+      
+      @include desktop {
+         margin-right: 40px;
+      }
+
+      @include table {
+         display: none;
+      }
+
+      &-list {
+         display: flex;
+         column-gap: 20px;
+      }
+
+      &-item {}
+
+      &-link {
+         padding: 10px 14px 10px 0px;
+         position: relative;
+         transition: var(--transition);
+
+         &::after {
+            content: '';
+            position: absolute;
+            bottom: 14px;
+            right: 0;
+            background-image: url('/images/arrow-icon.svg');
+            background-repeat: no-repeat;
+            width: 8px;
+            height: 9px;
+            transition: var(--transition);
+         }
+
+         @include hover {
+            color: var(--grey-color);
+   
+            &::after {
+               rotate: 45deg;
+               bottom: 24px;
+            }
+         }
+      }
+   }
+
+   &__sign-up {
+      padding: 10px 14px 10px 0px;
+      position: relative;
+      margin-right: 26px;
+      transition: var(--transition);
+
+      @include desktop {
+         margin-right: 14px;
+      }
+
+            @include table {
+         display: none;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: 16px;
+         right: 0;
+         background-image: url('/images/arrow-icon.svg');
+         background-repeat: no-repeat;
+         width: 8px;
+         height: 9px;
+         transition: var(--transition);
+      }
+
+      @include hover {
+         color: var(--grey-color);
+
+         &::after {
+            rotate: 45deg;
+            bottom: 26px;
+         }
+      }
+   }
+
+   &__template {
+      color: var(--dark-color);
+      padding: 12px 32px;
+      background-color: var(--orange-color);
+      border-radius: calc(var(--border-radius) * 2);
+      transition: var(--transition);
+      font-weight: 700;
+
+      @include desktop {
+         padding: 8px 20px;
+      }
+
+      @include table {
+         margin-right: 10px;
+      }
+
+      @include hover {
+         background-color: var(--orange-hover-color);
+      }
+   }
+
+   &__burger-menu {
+      @include table-above {
+         display: none;
+      }
+
+      width: 40px;
+      height: 40px;
+      background-color: var(--orange-color);
+      border-radius: calc(var(--border-radius) * 2);
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         translate: -50% -50%;
+         background-color: var(--dark-color);
+         width: 28px;
+         height: 2px;
+         box-shadow: 0px 9px var(--dark-color), 0px -9px var(--dark-color);
+      }
+   }
+}

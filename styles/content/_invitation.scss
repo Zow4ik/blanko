@@ -1,0 +1,78 @@
+.invitation {
+   background-color: var(--dark-color);
+   color: var(--white-color);
+
+   &__container {
+      position: relative;
+   }
+
+   &__slider {
+   }
+
+   &__slider-wrapper {
+   }
+
+   &__slide {
+   }
+
+   &__slide-content {
+      max-width: 580px;
+      text-align: center;
+      align-self: center;
+      margin-inline: auto;
+      margin-block: 40px;
+   }
+
+   &__slide-body {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+   }
+
+   &__name {
+      margin: 0px auto 39px auto;
+   }
+
+   &__quote {
+      margin-bottom: 41px;
+   }
+
+   &__text {
+      font-size: 40px;
+      @include lineHeight(48, 40);
+
+      @include mobile {
+         font-size: 32px;
+      }
+   }
+
+   &__author {
+      font-weight: 700;
+      font-size: 18px;
+      @include lineHeight(27, 18);
+   }
+
+   &__jobs {
+      font-size: 16px;
+      @include lineHeight(24, 16);
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.7);
+   }
+
+   &__pagination {
+      .swiper-pagination-bullet {
+         background-color: white;
+         width: 16px;
+         height: 16px;
+         border-radius: 0;
+      }
+   }
+
+   &__image-content {
+      align-self: center;
+
+      @include table {
+         display: none;
+      }
+   }
+}
