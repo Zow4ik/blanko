@@ -189,14 +189,14 @@ button {
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -440,7 +440,7 @@ body {
   position: absolute;
   bottom: 14px;
   right: 0;
-  background-image: url("/images/arrow-icon.svg");
+  background-image: url("../images/arrow-icon.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 9px;
@@ -485,7 +485,7 @@ body {
   position: absolute;
   bottom: 16px;
   right: 0;
-  background-image: url("/images/arrow-icon.svg");
+  background-image: url("../images/arrow-icon.svg");
   background-repeat: no-repeat;
   width: 8px;
   height: 9px;
